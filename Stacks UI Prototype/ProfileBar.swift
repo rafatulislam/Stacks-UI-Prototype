@@ -18,7 +18,18 @@ struct ProfileBar: View {
             Text("elonmusk")
                 .font(.headline)
             Spacer()
-            Image(systemName: "ellipsis")
+            Button(action: {
+                // Add follow action
+            }) {
+                Text("Follow")
+                    .fontWeight(.bold)
+                    .font(.system(size: 15))
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 10)
+                    .background(Color.blue)
+                    .cornerRadius(20)
+            }
         }
         .padding()
         .border(Color(hue: 1.0, saturation: 0.015, brightness: 0.878))

@@ -14,9 +14,9 @@ struct NavBar: View {
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
-            Text("Search")
+            Text("Explore")
                 .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
+                    Label("Explore", systemImage: "magnifyingglass")
                 }
             Text("Create Post")
                 .tabItem {
