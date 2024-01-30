@@ -14,7 +14,7 @@ struct NavBar: View {
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
-            Text("Explore")
+            ExploreView()
                 .tabItem {
                     Label("Explore", systemImage: "magnifyingglass")
                 }

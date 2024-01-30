@@ -26,7 +26,7 @@ struct ProfileBar: View {
             }
            
             Button(action: {
-                // Add follow action
+                // Follow
             }) {
                 Image(systemName: "plus.circle")
                     .font(.system(size: 20))
@@ -36,7 +36,7 @@ struct ProfileBar: View {
             Spacer()
            
             Button(action: {
-                // Add post/user interactions
+                // Interact
             }) {
                 Image(systemName: "ellipsis")
             }
