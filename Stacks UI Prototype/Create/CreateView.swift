@@ -95,6 +95,8 @@ struct CreateView: View {
                     }
                     .padding(.horizontal, 5)
                     Spacer()
+                    Text("1/1")
+                        .padding(.horizontal, 10)
                     Divider()
                         .frame(height: 30)
                     Button(action: {}) {
