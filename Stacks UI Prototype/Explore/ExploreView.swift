@@ -34,7 +34,7 @@ struct SearchBar: View {
                     }
                 }
             )
-            .padding(.horizontal, 10)
+            .padding(.horizontal, 0)
     }
 }
 
@@ -86,21 +86,23 @@ struct ExploreView: View {
 
     var body: some View {
         ScrollView {
-            VStack(spacing: 5) {
+            VStack(spacing: 20) {
                 SearchBar()
 
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 10) {
+                    HStack(spacing: 20) {
                         ForEach(trendingTopics, id: \.self) { topic in
                             Button(action: {
                                 self.selectedTopic = topic
                             }) {
                                 Text(topic)
-                                    .foregroundColor(.black)
-                                    .padding(.vertical)
-                                    .padding(.horizontal, 10)
+                                    .foregroundColor(.white)
+                                    .padding(.vertical, 7.5)
+                                    .padding(.horizontal, 20)
                                     .font(.system(size: 18))
                                     .bold(self.selectedTopic == topic)
+                                    .background(Color.black.opacity(0.8))
+                                    .cornerRadius(20)
                             }
                         }
                     }

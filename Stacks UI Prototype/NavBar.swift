@@ -18,7 +18,7 @@ struct NavBar: View {
                 .tabItem {
                     Label("Explore", systemImage: "magnifyingglass")
                 }
-            Text("Create Post")
+            CreateView()
                 .tabItem {
                     Label("Create", systemImage: "plus.rectangle")
                 }
