@@ -24,8 +24,8 @@ struct Header: View {
             }) {
                 Text("For You")
                     .font(.headline)
-                    .fontWeight(selectedButton == .forYou ? .semibold : .regular)
-                    .foregroundColor(.black)
+                    .fontWeight(selectedButton == .forYou ? .bold : .regular)
+                    .foregroundColor(selectedButton == .forYou ? .black: .gray)
             }
             
             Divider()
@@ -36,8 +36,8 @@ struct Header: View {
             }) {
                 Text("Following")
                     .font(.headline)
-                    .fontWeight(selectedButton == .following ? .semibold : .regular)
-                    .foregroundColor(.black)
+                    .fontWeight(selectedButton == .following ? .bold : .regular)
+                    .foregroundColor(selectedButton == .following ? .black: .gray)
             }
 
         }

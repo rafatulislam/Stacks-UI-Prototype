@@ -22,11 +22,11 @@ struct NavBar: View {
                 .tabItem {
                     Label("Create", systemImage: "plus.rectangle")
                 }
-            Text("Inbox")
+            InboxView()
                 .tabItem {
                     Label("Inbox", systemImage: "tray")
                 }
-            Text("Profile")
+            ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }

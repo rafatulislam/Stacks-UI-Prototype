@@ -90,19 +90,17 @@ struct ExploreView: View {
                 SearchBar()
 
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
+                    HStack(spacing: 15) {
                         ForEach(trendingTopics, id: \.self) { topic in
                             Button(action: {
                                 self.selectedTopic = topic
                             }) {
                                 Text(topic)
-                                    .foregroundColor(.white)
                                     .padding(.vertical, 7.5)
-                                    .padding(.horizontal, 20)
+                                    .padding(.horizontal, 10)
                                     .font(.system(size: 18))
                                     .bold(self.selectedTopic == topic)
-                                    .background(Color.black.opacity(0.8))
-                                    .cornerRadius(20)
+                                    .foregroundColor(self.selectedTopic == topic ? .black : Color.gray.opacity(0.9))
                             }
                         }
                     }
