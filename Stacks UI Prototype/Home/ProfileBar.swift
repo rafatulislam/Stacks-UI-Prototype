@@ -40,7 +40,7 @@ struct ProfileBar: View {
             }) {
                 Image(systemName: "ellipsis")
             }
-            .foregroundColor(.black)
+            .foregroundColor(Color.black.opacity(0.5))
             .padding(.horizontal, 10)
         }
         .padding()

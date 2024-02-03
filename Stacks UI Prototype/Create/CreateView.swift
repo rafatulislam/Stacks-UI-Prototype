@@ -32,8 +32,6 @@ struct CreateView: View {
                 }
                 .padding()
                 
-                Divider()
-                
                 ZStack(alignment: .topLeading) {
                     TextEditor(text: $titleText)
                         .font(.title2)

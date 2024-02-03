@@ -114,7 +114,7 @@ struct ExploreView: View {
             }
             .padding()
         }
-        .background(Color.gray.opacity(0.1))
+        .background(Color.gray.opacity(0.05))
     }
 }
 
