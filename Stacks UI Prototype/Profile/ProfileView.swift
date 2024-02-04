@@ -97,6 +97,7 @@ struct ProfileViewBar: View {
                 .padding(.horizontal, 10)
             }
             .padding(.vertical, 2.5)
+            .padding(.bottom, 5)
             Divider()
         }
     }
@@ -108,7 +109,7 @@ struct ProfileBarAlt: View {
             Image("elon")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 30, height: 30)
+                .frame(width: 36, height: 36)
                 .clipShape(Circle())
            
             HStack(spacing: 3) {

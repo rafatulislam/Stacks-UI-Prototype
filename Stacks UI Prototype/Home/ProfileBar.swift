@@ -10,12 +10,26 @@ import SwiftUI
 struct ProfileBar: View {
     var body: some View {
         HStack {
-            Image("elon")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 30, height: 30)
-                .clipShape(Circle())
-           
+            ZStack(alignment: .bottomTrailing) {
+                Image("elon")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 36, height: 36)
+                    .clipShape(Circle())
+
+                Button(action: {
+                    // Follow action
+                }) {
+                    Image(systemName: "plus.circle")
+                        .font(.system(size: 17.5))
+                        .foregroundColor(.black)
+                        .background(Color.white)
+                        .clipShape(Circle())
+                }
+                .offset(x: 7.5, y: 5) // Adjust this offset to position the button as desired
+            }
+            .padding(.trailing, 5)
+
             HStack(spacing: 3) {
                 Text("elonmusk")
                     .font(.headline)
@@ -24,14 +38,15 @@ struct ProfileBar: View {
                     .foregroundColor(.blue)
                     .font(.system(size: 16))
             }
-           
-            Button(action: {
-                // Follow
-            }) {
-                Image(systemName: "plus.circle")
-                    .font(.system(size: 20))
+            
+            HStack(alignment: .center) {
+                Circle()
+                    .fill(Color.gray)
+                    .frame(width: 2.5, height: 2.5)
+                Text("1/1/2024")
+                    .foregroundColor(.gray)
+                    .font(.system(size: 16))
             }
-            .foregroundColor(.black)
             
             Spacer()
            

@@ -72,7 +72,6 @@ struct CreateView: View {
                 }.padding(.horizontal, 20)
                 
                 Divider()
-                Spacer()
                 
                 HStack {
                     Button(action: {}) {
