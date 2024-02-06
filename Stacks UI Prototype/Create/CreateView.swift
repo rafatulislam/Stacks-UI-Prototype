@@ -126,7 +126,7 @@ struct PhotoGridView: View {
                     Image(systemName: "camera")
                         .resizable()
                         .scaledToFit()
-                        .padding(20)
+                        .padding(25)
                         .frame(width: 100, height: 100)
                         .cornerRadius(10)
                         .foregroundColor(.black)
