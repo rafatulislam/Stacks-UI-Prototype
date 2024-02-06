@@ -71,6 +71,8 @@ struct CreateView: View {
                     }
                 }.padding(.horizontal, 20)
                 
+                PhotoGridView()
+                
                 Divider()
                 
                 HStack {
@@ -108,6 +110,41 @@ struct CreateView: View {
                 
                 Divider()
             }
+        }
+    }
+}
+
+struct PhotoGridView: View {
+    let photos: [String] = ["elon", "antibes", "falconheavy", "rocket"]
+
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 20) {
+                Button(action: {
+                    // Take photo
+                }) {
+                    Image(systemName: "camera")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(20)
+                        .frame(width: 100, height: 100)
+                        .cornerRadius(10)
+                        .foregroundColor(.black)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.black, lineWidth: 1)
+                        )
+                }
+                
+                ForEach(photos, id: \.self) { photoName in
+                    Image(photoName)
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .cornerRadius(10)
+                }
+            }
+            .padding([.top, .leading, .trailing])
+            .padding(.bottom, 10)
         }
     }
 }
