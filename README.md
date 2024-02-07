@@ -1,1 +1,1 @@
-Building the UI Demo for Stacks.
+Building the UI Prototype for Stacks.
