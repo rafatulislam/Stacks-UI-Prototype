@@ -71,7 +71,7 @@ struct ExploreCard: View {
 }
 
 struct ExploreView: View {
-    let trendingTopics = ["Trending", "News", "Technology", "Sports", "Entertainment", "Art", "Fitness"]
+    let trendingTopics = ["Trending", "News", "Technology", "Sports", "Politics", "Entertainment", "Business", "Gaming", "Fashion", "Art"]
 
     let gridLayout = [
         GridItem(.flexible(), spacing: 1),

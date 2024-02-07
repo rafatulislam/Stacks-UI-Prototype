@@ -13,15 +13,6 @@ struct Header: View {
 
     var body: some View {
         HStack {
-            // resize this button or use a different layout
-//            Button(action: {
-//                // Settings
-//            }) {
-//                Image(systemName: "line.3.horizontal")
-//                    .font(.title)
-//                    .foregroundColor(.black)
-//            }
-
             Text("Stacks")
                 .font(.title)
                 .fontWeight(.bold)
