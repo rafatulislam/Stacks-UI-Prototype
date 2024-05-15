@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProfileBar: View {
+    @State private var isFollowed = false
+    
     var body: some View {
         HStack {
             ZStack(alignment: .bottomTrailing) {
@@ -17,16 +19,26 @@ struct ProfileBar: View {
                     .frame(width: 36, height: 36)
                     .clipShape(Circle())
 
-                Button(action: {
-                    // Follow action
-                }) {
-                    Image(systemName: "plus.circle")
+                if !isFollowed {
+                    Button(action: {
+                        isFollowed = true
+                    }) {
+                        Image(systemName: "plus.circle")
+                            .font(.system(size: 17.5))
+                            .foregroundColor(.black)
+                            .background(Color.white)
+                            .clipShape(Circle())
+                    }
+                    .offset(x: 7.5, y: 5)
+                } else {
+                    Image(systemName: "checkmark.circle.fill")
                         .font(.system(size: 17.5))
-                        .foregroundColor(.black)
+                        .foregroundColor(.green)
                         .background(Color.white)
                         .clipShape(Circle())
+                        .offset(x: 7.5, y: 5)
+                        .transition(.scale)
                 }
-                .offset(x: 7.5, y: 5) // Adjust this offset to position the button as desired
             }
             .padding(.trailing, 5)
 
@@ -59,7 +71,6 @@ struct ProfileBar: View {
             .padding(.horizontal, 10)
         }
         .padding()
-        
     }
 }
 
